@@ -1,4 +1,4 @@
-# JavaScript Interview Highlights
+
 
 ## Topic 1: var vs let vs const
 
@@ -184,38 +184,38 @@ const c = 30;
 
 - ❌ Be careful with var:
 
-- var doesn't have block scope, so shadowing can behave unexpectedly.
+  - var doesn't have block scope, so shadowing can behave unexpectedly.
 
-  ```js
-  var a = 5;
+    ```js
+    var a = 5;
 
-  function test() {
-    var a = 10; // Shadows global 'a' inside function
-    console.log(a); // 👉 10
-  }
+    function test() {
+      var a = 10; // Shadows global 'a' inside function
+      console.log(a); // 👉 10
+    }
 
-  test();
-  console.log(a); // 👉 5
-  ```
+    test();
+    console.log(a); // 👉 5
+    ```
 
 - 🚫 Illegal Shadowing
 
-- Shadowing becomes illegal when trying to shadow a variable declared with let/const using var in the same or inner block.
+  - Shadowing becomes illegal when trying to shadow a variable declared with let/const using var in the same or inner block.
 
-  ```js
-  let z = 100;
+    ```js
+    let z = 100;
 
-  {
-    var z = 200; // ❌ SyntaxError: Identifier 'z' has already been declared
-  }
-  ```
+    {
+      var z = 200; // ❌ SyntaxError: Identifier 'z' has already been declared
+    }
+    ```
 
-  ```js
-  var z = 100;
+    ```js
+    var z = 100;
 
-  {
-    let z = 200; // ✅ Allowed: block-scoped shadowing
-    console.log(z); // 👉 200
-  }
-  console.log(z); // 👉 100
-  ```
+    {
+      let z = 200; // ✅ Allowed: block-scoped shadowing
+      console.log(z); // 👉 200
+    }
+    console.log(z); // 👉 100
+    ```
