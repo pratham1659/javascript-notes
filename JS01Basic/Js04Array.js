@@ -1,3 +1,38 @@
+var myArray = [];
+
+var myDaysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+myDaysOfWeek[1];
+
+var myList = ["Pratham", 12, 23, "Kumar", true, false, "Hello"];
+
+var myArray = [];
+myArray;
+
+var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday"];
+daysOfTheWeek;
+
+var myList = [0, 1, 2, "string1", "string2", "string3", true, false];
+myList;
+
+var counts = ["Belknap", "Strafford", "Carroll", "Rockingham"];
+counts;
+
+var listOfStuff = [{ name: "value" }, [1, 2, 3], true, "nifty"];
+listOfStuff;
+listOfStuff.length; // 4 answer
+
+counts.push("Coos");
+counts;
+
+counts.pop();
+
+delete counts[2];
+counts;
+
+counts.splice(2, 1); // index and element
+counts;
+counts.length;
+
 let brr = new Array("Pratham", 1, true);
 let arr = [0, 1, "TRUE", 3, true, 89, "Arr"];
 
@@ -68,3 +103,25 @@ let ansRed = redArr.reduce((acc, curr) => {
 }, 0);
 
 console.log(ansRed);
+
+var string1 = "This is the longest string ever.";
+var string2 = "This is the shortest string ever.";
+var string3 = "Is this the thing called Mount Everest?";
+var string4 = "This is the Sherman on the Mount.";
+
+var regex = /this/;
+
+regex.test(string1);
+regex.test(string2);
+regex.test(string3);
+regex.test(string4);
+
+regex = /this/i;
+
+regex = /^this/i;
+
+regex = /this$/i;
+
+regex = /ever.$/i;
+
+regex = /ever\.$/i;
